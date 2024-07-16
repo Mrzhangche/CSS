@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .home + p {
+        color: red;
+      }
+      .home2 ~ p {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p class="home">紧邻兄弟元素</p>
+      <p>紧邻兄弟元素</p>
+      <p>紧邻兄弟元素</p>
+    </div>
+    <div>
+      <p class="home2">普遍兄弟元素</p>
+      <p>普遍兄弟元素</p>
+      <p>普遍兄弟元素</p>
+    </div>
+  </body>
+</html>

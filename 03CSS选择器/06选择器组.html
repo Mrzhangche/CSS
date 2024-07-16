@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 选择器组--交集选择器 */
+      div.box1 {
+        background-color: red;
+      }
+      /* 选择器组--并集选择器 */
+      p.box1,
+      .box2 {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">交集选择器</div>
+
+    <p class="box1">并集选择器</p>
+    <div class="box2">并集选择器</div>
+  </body>
+</html>
