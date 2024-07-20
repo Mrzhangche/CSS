@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        /*p元素可以进行继承 */
+        color: red;
+        border: 1px solid red;
+      }
+      .box p {
+        /*p元素不能继承border属性 */
+        /* 但是可以强制继承 */
+        border: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>123</p>
+    </div>
+  </body>
+</html>

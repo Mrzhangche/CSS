@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>伪元素</title>
+    <style>
+      /* 不常用 */
+      .box1::first-letter {
+        color: red;
+      } /* 设置第一个字母的颜色为红色 */
+      .box1::first-line {
+        color: blue; /* 设置第一行的颜色为蓝色 */
+      }
+      /* ::after  ::before 是在元素前或者后面插入一些内容 */
+      /* 前面插入文字 */
+      .item::before {
+        content: "123";
+        color: red;
+      }
+      /* 后面插入图片 */
+      .item::after {
+        content: url("./images/new.svg");
+      }
+      /* content属性必须设置 */
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      伪元素是用于设置元素指定部分的样式，比如设置第一个字母、第一行、或者某个元素的第一个子元素等。
+    </div>
+    <div class="box2 item">伪元素</div>
+    <div class="box3 item">伪元素</div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        /* 与其他行内级元素同占一行，不可设置宽高 */
+        display: inline;
+        background-color: red;
+      }
+      .box2 {
+        /* 独占一行，可以设置宽高 */
+        display: block;
+      }
+      .box3 {
+        /* 与其他行内级元素同占一行，也可以设置宽高 */
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="box1">变成inline</div>
+      <p class="box1">123</p>
+      <span>456</span>
+    </div>
+    <span class="box2">变成block</span>
+    <span class="box2">变成block</span>
+    <span class="box2">变成block</span>
+  </body>
+</html>

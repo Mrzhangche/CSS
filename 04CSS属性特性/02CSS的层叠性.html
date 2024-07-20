@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 优先级：!important > 行内样式 > id选择器 > 类选择器 > 标签选择器 > 通配符选择器 > 继承 > 浏览器默认 */
+      p {
+        color: red !important;
+      } /* 优先级最高 */
+      p {
+        color: blue;
+      } /* 优先级最低 */
+      /* 优先级相同时，后写的会覆盖先写的 */
+      div {
+        color: yellow;
+      }
+      div {
+        color: black;
+      }
+      div {
+        color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <p style="color: green">这是一个段落</p>
+    <div>123</div>
+  </body>
+</html>
