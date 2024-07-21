@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .father {
+        height: 300px;
+        width: 300px;
+        background-color: red;
+      }
+      .child {
+        height: 100px;
+        width: 100px;
+        background-color: blue;
+      }
+      .marginTop {
+        margin-top: 50px; /* 上下margin传递问题 */
+      }
+      .marginCancel1 {
+        /* 使用padding进行消除 */
+        padding-top: 50px;
+      }
+      .marginCancel2 {
+        /* 使用border进行消除,需要给父元素添加 */
+        border: 1px solid transparent;
+      }
+      .marginCancel3 {
+        /* 使用overflow进行消除,需要给父元素添加 */
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 该问题主要出现在父子元素之间，给子元素设置上下margin的时候出现 -->
+    <div class="father">
+      <div class="child marginTop"></div>
+    </div>
+  </body>
+</html>
