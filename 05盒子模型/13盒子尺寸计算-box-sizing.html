@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        padding: 70px;
+        border: 10px solid #000;
+        /* 无论padding是多少，盒子的整体尺寸大小就是200， */
+        /* 默认值为content-box */
+        box-sizing: border-box;
+      }
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        padding: 70px;
+        border: 10px solid #000;
+        box-sizing: content-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">123</div>
+    <div class="box1">123</div>
+  </body>
+</html>
