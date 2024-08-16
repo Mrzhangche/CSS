@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 140px;
+        height: 200px;
+        /* background-color: green; */
+      }
+
+      .container .main {
+        width: 140px;
+        height: 140px;
+        position: relative;
+        margin: 0 auto;
+      }
+      .container .main .mask {
+        background-image: url(./images/backgroundImages.png);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      .container .main .bottom_mask {
+        width: 100%;
+        height: 25px;
+        background-image: url(./images/backgroundImages.png);
+        background-position: 0 -537px;
+        background-repeat: no-repeat;
+
+        position: absolute;
+        bottom: 0;
+      }
+      .container .main .music::before {
+        content: "";
+        display: inline-block;
+        background: url(./images/iconImages.png) no-repeat 0 -24px;
+        width: 14px;
+        height: 11px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <img src="./images/mainImages.jpg" alt="" />
+        <div class="mask"></div>
+        <div class="bottom_mask">
+          <i class="music"></i>
+        </div>
+      </div>
+      <div class="title">这个夏天 要一起喝橘子味的汽水吗</div>
+    </div>
+  </body>
+</html>

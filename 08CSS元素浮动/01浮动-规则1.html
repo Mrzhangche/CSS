@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        position: fixed;
+        background-color: yellow;
+      }
+      .box2 {
+        background-color: aqua;
+        float: right;
+        width: 100%;
+      }
+      .item1,
+      .item2 {
+        background-color: red;
+      }
+      /* 浮动脱标
+
+      */
+      .item1 {
+        background-color: blue;
+        float: left;
+      }
+
+      .item2 {
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+    </div>
+    <div class="box2">123</div>
+  </body>
+</html>

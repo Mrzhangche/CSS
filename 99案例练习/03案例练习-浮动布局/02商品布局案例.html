@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 1190px;
+        height: 800px;
+        background-color: pink;
+        margin: 0 auto;
+      }
+      /* 若此种方式设置，会导致最后一个item跑到下一行
+        1.可以增加container的尺寸
+        2.可以给最后一个item设置margin-right: 0;
+        3.再嵌套一层box，给box设置margin: right -10px;
+      */
+      .item {
+        width: 230px;
+        height: 100px;
+        background-color: skyblue;
+        float: left;
+        margin-right: 10px;
+      }
+
+      .box {
+        margin-right: -10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="item">1</div>
+        <div class="item">1</div>
+        <div class="item">1</div>
+        <div class="item">1</div>
+        <div class="item">1</div>
+      </div>
+    </div>
+  </body>
+</html>

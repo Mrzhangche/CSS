@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 浮动之后，456并没有覆盖123，而是将其推出去了 */
+      strong {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <span>123</span>
+      <strong>456</strong>
+    </div>
+  </body>
+</html>

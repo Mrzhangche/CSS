@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 600px;
+        background-color: red;
+        background-image: url(./images/图片01.webp);
+        /* 设置背景尺寸 */
+        /*
+        默认值，以图片大小显示：auto
+        宽度或者高度铺满元素（保持宽高比）：contain
+        完全覆盖铺满元素：cover
+        拉伸到指定大小（或者百分比）：100px 200px
+        */
+        /* background-size: cover; */
+        background-size: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

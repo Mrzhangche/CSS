@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 可以随意设置宽高 */
+      .box {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+      .box2 {
+        position: fixed;
+        width: 300px;
+        height: 300px;
+        background-color: blue;
+        top: 200px;
+      }
+      /*  宽高默认由内容决定，包裹内容*/
+      .box3 {
+        background-color: green;
+        position: absolute;
+      }
+      /* 不在给父元素汇报宽高数据,该元素相当于不占据父元素的空间 */
+      .box4 {
+        background-color: yellow;
+      }
+      .box4 span {
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">123</div>
+    <span class="box2">456</span>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <div class="box3">
+      <span>789</span>
+    </div>
+    <div class="box4">
+      <span>111111</span>
+    </div>
+  </body>
+</html>
