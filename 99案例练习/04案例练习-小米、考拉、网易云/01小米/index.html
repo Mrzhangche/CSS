@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <style>
+      .dress {
+        /* background-color: red; */
+      }
+      .header {
+        height: 58px;
+        position: relative;
+      }
+
+      .header .left-area {
+        float: left;
+        line-height: 58px;
+      }
+
+      .header .left-area .title {
+        font-weight: 400;
+      }
+
+      .header .right-area {
+        float: right;
+        line-height: 58px;
+      }
+      .header .right-area .active,
+      .header .right-area .item:hover {
+        padding: 3px 0;
+        color: #ff6700;
+        border-bottom: 2px solid #ff6700;
+      }
+
+      /* 列表内容 */
+      .dress .box {
+        margin-right: -14px;
+      }
+
+      .dress .content .item {
+        float: left;
+        width: 234px;
+        height: 300px;
+
+        margin-right: 14px;
+        margin-bottom: 14px;
+        position: relative;
+        top: 0;
+
+        background-color: #ff6700;
+        transition: all 1s;
+      }
+
+      .dress .content .item:hover {
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+        position: relative;
+        top: -2px;
+
+        transition: all 1s;
+      }
+
+      .dress .content .item1 {
+        height: 614px;
+      }
+
+      .dress .content .item9,
+      .dress .content .item10 {
+        height: 143px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mi_wrapper dress">
+      <div class="header clear_fix">
+        <div class="left-area">
+          <h3 class="title">智能穿戴</h3>
+        </div>
+        <div class="right-area">
+          <a class="item active hot" href="#">热门</a>
+          <a class="item new-dress" href="#">穿戴</a>
+        </div>
+      </div>
+      <div class="box">
+        <ul class="content">
+          <li class="item item1"><a href="">1</a></li>
+          <li class="item item2"><a href="">1</a></li>
+          <li class="item item3"><a href="">1</a></li>
+          <li class="item item4"><a href="">1</a></li>
+          <li class="item item5"><a href="">1</a></li>
+          <li class="item item6"><a href="">1</a></li>
+          <li class="item item7"><a href="">1</a></li>
+          <li class="item item8"><a href="">1</a></li>
+          <li class="item item9"><a href="">1</a></li>
+          <li class="item item10"><a href="">1</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

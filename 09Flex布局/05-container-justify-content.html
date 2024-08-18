@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 300px;
+        width: 500px;
+        background-color: red;
+      }
+      .item {
+        width: 100px;
+        height: 100px;
+      }
+
+      .box1 {
+        display: flex;
+        /* 默认值 */
+        justify-content: flex-start;
+        justify-content: flex-end;
+        justify-content: center;
+        justify-content: space-between;
+        justify-content: space-around;
+        justify-content: space-evenly;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 默认情况下，子元素的大小超过了父元素，子元素的大小将会被压缩 -->
+    <div class="box box1">
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+    </div>
+
+    <script src="./js/itemRandomColors.js"></script>
+  </body>
+</html>

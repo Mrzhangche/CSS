@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        /* 解决方案一，给父元素设置固定的高度 */
+        /* height: 1000px; */
+        background-color: red;
+      }
+      .container div {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        float: left;
+      }
+      .box {
+        height: 100px;
+        background-color: yellow;
+      }
+      /* 解决方案二，增加一个元素，设置clear属性 */
+      .line {
+        clear: both;
+      }
+      /* 解决方案三，写一个CSS类，使用伪元素实现,只需要在父元素中使用即可 */
+      .clear-fix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container clear-fix">
+      <div>132</div>
+      <!-- /* 解决方案二，增加一个元素，设置clear属性 */ -->
+      <!-- <div class="line">789</div> -->
+      <div>456</div>
+    </div>
+    <div class="box"></div>
+  </body>
+</html>

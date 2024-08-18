@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>网易云的top</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <style>
+      .top {
+        height: 70px;
+        background-color: #242424;
+        box-sizing: border-box;
+        border-bottom: 1px solid #000;
+      }
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        line-height: 69px;
+        height: 69px;
+        /* background-color: red; */
+      }
+
+      .topbar .bar-left {
+        display: flex;
+      }
+
+      .topbar .bar-left .logo {
+        background-image: url(./images/topbar.png);
+      }
+      .topbar .bar-left .logo a {
+        display: block;
+        width: 157px;
+        padding-right: 20px;
+        background-position: 0 0;
+        text-indent: -9999px;
+      }
+
+      .topbar .bar-left .list {
+        display: flex;
+      }
+      .topbar .bar-left .list .item {
+        display: block;
+        color: #ccc;
+        font-size: 14px;
+        padding: 0 20px;
+      }
+      .topbar .bar-left .list .item:hover,
+      .topbar .bar-left .list .active {
+        color: white;
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <div class="topbar wrapper_01">
+        <div class="bar-left">
+          <h1 class="logo">
+            <a href="#">网易云音乐</a>
+          </h1>
+          <ul class="list">
+            <li><a href="#" class="item active">发现音乐</a></li>
+            <li><a href="#" class="item">我的音乐</a></li>
+            <li><a href="#" class="item">关注</a></li>
+            <li><a href="#" class="item">商城</a></li>
+            <li><a href="#" class="item">音乐人</a></li>
+            <li><a href="#" class="item">下载客户端</a></li>
+          </ul>
+        </div>
+        <div class="bar-right">2</div>
+      </div>
+      <div class="topnav"></div>
+    </div>
+  </body>
+</html>
