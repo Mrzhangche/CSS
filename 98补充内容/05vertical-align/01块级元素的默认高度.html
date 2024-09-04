@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        background-color: red;
+      }
+      .box2 {
+        background-color: red;
+      }
+      .box3 {
+        background-color: red;
+      }
+      .inline_box {
+        display: inline-block;
+        width: 20px;
+        height: 300px;
+        background-color: aqua;
+      }
+      .inline_box1 {
+        display: inline-block;
+        margin-bottom: 50px;
+        width: 50px;
+        height: 300px;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 只有文字 -->
+    <div class="box1">123456</div>
+    <br />
+    <!-- 文字加图片，图片下面会有一点的像素 -->
+    <div class="box2">
+      <img
+        src="../../99案例练习/04案例练习-小米、考拉、网易云/03网易云/images/album01.jpg"
+        alt=""
+      />
+      123
+    </div>
+    <br />
+    <!-- 文字，图片加span -->
+    <div class="box1">
+      <img
+        src="../../99案例练习/04案例练习-小米、考拉、网易云/03网易云/images/album01.jpg"
+        alt=""
+      />123456
+      <span class="inline_box"></span>
+    </div>
+    <br />
+    <!-- 文字，图片加span 和margin-bottom -->
+    <div class="box1">
+      <img
+        src="../../99案例练习/04案例练习-小米、考拉、网易云/03网易云/images/album01.jpg"
+        alt=""
+      />123456
+      <span class="inline_box1"></span>
+    </div>
+    <br />
+    <!-- span中有文字，会是最后一行文本的基线位置 -->
+    <div class="box1">
+      <img
+        src="../../99案例练习/04案例练习-小米、考拉、网易云/03网易云/images/album01.jpg"
+        alt=""
+      />
+      阿斯顿撒旦
+      <span class="inline_box1"
+        >1234654651阿三大苏打6516516 asd asd5 afds f165 1 56阿三大苏打165</span
+      >
+      <img
+        src="../../99案例练习/04案例练习-小米、考拉、网易云/03网易云/images/album01.jpg"
+        alt=""
+      />
+    </div>
+  </body>
+</html>

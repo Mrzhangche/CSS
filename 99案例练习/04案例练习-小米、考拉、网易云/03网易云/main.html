@@ -3,190 +3,391 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>网易云音乐</title>
-    <link
-      rel="shortcut icon"
-      href="//s1.music.126.net/style/favicon.ico?v20180823"
-    />
+    <title>Document</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/page_header.css" />
-    <link rel="stylesheet" href="./css/page_banner.css" />
-    <link rel="stylesheet" href="./css/page_main.css" />
+    <style>
+      .main .area {
+        display: flex;
+        justify-content: space-between;
+
+        /* background-color: red; */
+        border: 1px solid #d3d3d3;
+        border-width: 0 1px;
+        background-image: url(./images/main_wrap.png);
+      }
+      /* 左侧区域 */
+      .main .area-left {
+        width: 729px;
+        padding: 20px 20px 40px;
+      }
+      /*热门推荐 */
+      .main .area-left .recommend-section .list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px 5px;
+      }
+
+      .main .area-left .recommend-section .list .item {
+        position: relative;
+        width: 140px;
+        height: 140px;
+        margin-bottom: 100px;
+      }
+
+      .main .area-left .recommend-section .list .item .desc {
+        margin-top: 5px;
+      }
+      .main .area-left .recommend-section .list .item .desc .icon-radio {
+        position: relative;
+        top: 2px;
+      }
+      .main .area-left .recommend-section .list .item .desc:hover {
+        text-decoration: underline;
+      }
+      .main .area-left .recommend-section .list .mask {
+        position: absolute;
+        background-image: url(./images/coverall.png);
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+      }
+      .main .area-left .recommend-section .list .bottom {
+        height: 27px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-image: url(./images/coverall.png);
+        background-position: 0 -537px;
+      }
+      .main .area-left .recommend-section .list .bottom > a {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+      }
+      .main .area-left .recommend-section .list .bottom .left {
+        position: absolute;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+      }
+      .main .area-left .recommend-section .list .bottom .play-count {
+        line-height: 27px;
+        color: #ccc;
+        margin-left: 17px;
+      }
+
+      /* 新碟上架 */
+      .disc-section .content {
+        position: relative;
+        height: 186px;
+
+        margin: 20px 0;
+        box-sizing: border-box;
+        border: 1px solid #d3d3d3;
+      }
+      /* 左右控制 */
+      .disc-section .content .control {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        background: url(./images/main_right.png);
+        cursor: pointer;
+      }
+      .disc-section .content .control-left {
+        left: 5px;
+        background-position: -260px -75px;
+      }
+      .disc-section .content .control-right {
+        right: 10px;
+        background-position: -320px -75px;
+      }
+
+      .disc-section .content .inner {
+        height: 100%;
+
+        box-sizing: border-box;
+        padding: 0 20px;
+        border: 1px solid #fff;
+        background-color: #f5f5f5;
+      }
+      .disc-section .content .inner .roller {
+        display: flex;
+        height: 100%;
+
+        /* overflow: hidden; */
+      }
+      .disc-section .content .inner .roller .list {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        /* 禁止压缩 */
+        flex-shrink: 0;
+      }
+      .disc-section .content .inner .roller .list .item {
+        position: relative;
+        width: 118px;
+        height: 150px;
+        background-repeat: no-repeat;
+        background-position: -260px 100px;
+      }
+      .disc-section .content .inner .roller .list .item .album {
+        position: relative;
+      }
+      .disc-section .content .inner .roller .list .item .cover {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: url(./images/coverall.png) no-repeat 0 -570px;
+      }
+      .disc-section .content .inner .roller .list .item .cover + .icon_play_01 {
+        display: none;
+        position: absolute;
+        right: 30px;
+        bottom: 10px;
+      }
+      /* 鼠标放上去显示 */
+      .disc-section
+        .content
+        .inner
+        .roller
+        .list
+        .item
+        .cover:hover
+        + .icon_play_01 {
+        display: block;
+      }
+      .disc-section .content .inner .roller .list .item p {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin-top: 5px;
+        padding-right: 10px;
+      }
+      .disc-section .content .inner .roller .list .item .title a {
+        color: #000;
+      }
+
+      .disc-section .content .inner .roller .list .item .anchor a {
+        color: #666;
+      }
+      .disc-section .content .inner .roller .list .item p:hover {
+        text-decoration: underline;
+      }
+      /* 榜单区域 */
+      .rank-section .content {
+        display: flex;
+        height: 472px;
+        margin-top: 20px;
+        background: url(./images/rank_background.png);
+      }
+      .rank-section .content .rank {
+        width: 230px;
+      }
+      /* 榜单第一行 */
+      /* 封面 */
+      .rank-section .content .rank .header {
+        display: flex;
+        height: 120px;
+        box-sizing: border-box;
+        padding: 20px 0 0 20px;
+      }
+      .rank-section .content .rank .header .alubum {
+        position: relative;
+        width: 80px;
+        height: 80px;
+      }
+      .rank-section .content .rank .header .alubum img {
+        height: 100%;
+        width: 100%;
+      }
+      .rank-section .content .rank .header .mask {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url(./images/coverall.png) -145px -57px;
+      }
+      /*标题 */
+      .rank-section .content .rank .header .info {
+        padding: 10px;
+      }
+      .rank-section .content .rank .header .info .title {
+        color: #333;
+      }
+      .rank-section .content .rank .header .info .title:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .rank-section .content .rank .header .info .handler {
+        margin-top: 10px;
+      }
+      .rank-section .content .rank .header .info .handler .icon_main_favor {
+        margin-left: 5px;
+      }
+      /* 歌曲列表 */
+      .rank-section .content .rank .list {
+        padding-left: 12px;
+      }
+      .rank-section .content .rank .list .item {
+        display: flex;
+        height: 32px;
+        line-height: 32px;
+      }
+      .rank-section .content .rank .list .item .no {
+        width: 35px;
+        text-align: center;
+        font-size: 16px;
+        color: #666;
+      }
+      .rank-section .content .rank .list .item:nth-child(-n + 3) .no {
+        color: #c10d0c;
+      }
+      .rank-section .content .rank .list .item .song {
+        flex: 1;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .rank-section .content .rank .list .item .song:hover {
+        text-decoration: underline;
+      }
+      .rank-section .content .rank .list .item .operation {
+        display: none;
+        align-items: center;
+        width: 82px;
+      }
+      .rank-section .content .rank .list .item:hover .operation {
+        display: flex;
+      }
+      .rank-section .content .rank .list .item .operation a {
+        margin-right: 8px;
+      }
+      /* 查看全部 */
+      .rank-section .content .rank .list .more {
+        height: 32px;
+        line-height: 32px;
+        text-align: right;
+        padding-right: 32px;
+      }
+      .rank-section .content .rank .list .more:hover {
+        text-decoration: underline;
+      }
+      /* 右侧区域 */
+      .main .area-right {
+        width: 250px;
+      }
+      /* vip图片 */
+      .main .area-right .vip_card img {
+        width: 250px;
+        height: 89px;
+        margin: 0 auto;
+      }
+      .main .area-right .user-login {
+        width: 250px;
+        height: 126px;
+      }
+      .main .area-right .user-login .desc {
+        width: 205px;
+        margin: 0 auto;
+        padding-top: 16px;
+        font-size: 12px;
+        color: #666;
+        line-height: 22px;
+      }
+      .main .area-right .user-login .btn {
+        display: block;
+        margin: 15px;
+        width: 100px;
+        height: 31px;
+        line-height: 31px;
+        text-align: center;
+        margin: 15px auto 0;
+        font-size: 12px;
+        color: #fff;
+      }
+      .main .area-right .user-login .btn:hover {
+        background-position: -110px -195px;
+      }
+
+      .main .area-right .settle-singer {
+        padding: 20px;
+      }
+      .main .area-right .settle-singer .list {
+        padding: 5px 0;
+      }
+      .main .area-right .settle-singer .list .item {
+        display: flex;
+        /* 就没有了拉伸效果 */
+        /* align-items: center; */
+        width: 210px;
+        height: 62px;
+        margin: 15px 0;
+        background-color: #fafafa;
+      }
+      .main .area-right .settle-singer .list .item .info {
+        flex-grow: 1;
+        /* 使其内部居中，可以使用flex布局
+        让其内部column排列
+        之后设置space-around
+        */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        padding: 0 10px;
+        border: 1px solid #ccc;
+        border-left: none;
+      }
+      .main .area-right .settle-singer .list .item .info .singer {
+        font-size: 14px;
+        font-weight: 700;
+        color: #000;
+      }
+      .main .area-right .settle-singer .list .item .info .desc {
+        font-size: 12px;
+        color: #666;
+        margin-top: 4px;
+      }
+      /* 热门主播 */
+      .main .area-right .hot-anchor {
+        padding: 20px;
+      }
+      .main .area-right .hot-anchor .anchor-list {
+        margin-top: 20px;
+      }
+      .main .area-right .hot-anchor .anchor-list .item {
+        display: flex;
+        margin: 10px 0;
+      }
+      .main .area-right .hot-anchor .anchor-list .item .info {
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 10px;
+      }
+      .main .area-right .hot-anchor .anchor-list .item .info p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
   </head>
   <body>
-    <div class="header">
-      <div class="top">
-        <div class="topbar wrapper_01">
-          <div class="bar-left">
-            <h1 class="background_image_topbar_sprite logo">
-              <a href="#">网易云音乐</a>
-            </h1>
-            <ul class="list">
-              <li>
-                <a href="#" class="item active">发现音乐</a>
-              </li>
-              <li>
-                <a href="#" class="item">我的音乐</a>
-              </li>
-              <li><a href="#" class="item">关注</a></li>
-              <li><a href="#" class="item">商城</a></li>
-              <li><a href="#" class="item">音乐人</a></li>
-              <li>
-                <a href="#" class="item"
-                  >下载客户端
-                  <i
-                    class="background_image_topbar_sprite topbar_icon_hot icon-hot"
-                  ></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="bar-right">
-            <div
-              class="background_image_topbar_sprite topbar_icon_search search"
-            >
-              <input type="text" placeholder="音乐/视频/电台/用户" />
-            </div>
-            <div class="anthor"><a href="#">创作者中心</a></div>
-            <div class="login">
-              <a href="#">登录</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="nav">
-        <div class="navbar wrapper_01">
-          <ul class="list">
-            <li>
-              <a href="#" class="item active"><span>推荐</span></a>
-            </li>
-            <li>
-              <a href="#" class="item"><span>排行榜</span></a>
-            </li>
-            <li>
-              <a href="#" class="item"><span>歌单</span></a>
-            </li>
-            <li>
-              <a href="#" class="item"><span>主播电台</span></a>
-            </li>
-            <li>
-              <a href="#" class="item"><span>歌手</span></a>
-            </li>
-            <li>
-              <a href="#" class="item"><span>新碟上架</span></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="banner">
-      <div class="area wrapper_03">
-        <div class="area-left">
-          <!-- 图片列表 -->
-          <ul class="img-list">
-            <li>
-              <a class="item" href="#">
-                <img src="./images/banner1.jpg" alt="" />
-              </a>
-            </li>
-            <li>
-              <a class="item" href="#">
-                <img src="./images/banner1.jpg" alt="" />
-              </a>
-            </li>
-            <li>
-              <a class="item" href="#">
-                <img src="./images/banner1.jpg" alt="" />
-              </a>
-            </li>
-          </ul>
-          <ul class="dots-list">
-            <li>
-              <a class="item" href="#"
-                ><span
-                  class="background_image_banner_sprite banner_icon_dots active"
-                ></span
-              ></a>
-            </li>
-            <li>
-              <a class="item" href="#"
-                ><span
-                  class="background_image_banner_sprite banner_icon_dots"
-                ></span
-              ></a>
-            </li>
-            <li>
-              <a class="item" href="#"
-                ><span
-                  class="background_image_banner_sprite banner_icon_dots"
-                ></span
-              ></a>
-            </li>
-            <li>
-              <a class="item" href="#"
-                ><span
-                  class="background_image_banner_sprite banner_icon_dots"
-                ></span
-              ></a>
-            </li>
-            <li>
-              <a class="item" href="#"
-                ><span
-                  class="background_image_banner_sprite banner_icon_dots"
-                ></span
-              ></a>
-            </li>
-            <li>
-              <a class="item" href="#"
-                ><span
-                  class="background_image_banner_sprite banner_icon_dots"
-                ></span
-              ></a>
-            </li>
-            <li>
-              <a class="item" href="#"
-                ><span
-                  class="background_image_banner_sprite banner_icon_dots"
-                ></span
-              ></a>
-            </li>
-            <li>
-              <a class="item" href="#"
-                ><span
-                  class="background_image_banner_sprite banner_icon_dots"
-                ></span
-              ></a>
-            </li>
-            <li>
-              <a class="item" href="#"
-                ><span
-                  class="background_image_banner_sprite banner_icon_dots"
-                ></span
-              ></a>
-            </li>
-            <li>
-              <a class="item" href="#"
-                ><span
-                  class="background_image_banner_sprite banner_icon_dots"
-                ></span
-              ></a>
-            </li>
-          </ul>
-        </div>
-        <div class="area-right">
-          <a class="download" href="#">下载客户端</a>
-          <p class="desc">PC 安卓 iPhone WP iPad Mac 六大客户端</p>
-        </div>
-        <div class="control left background_image_banner_sprite">
-          <a href="#"></a>
-        </div>
-        <div class="control right background_image_banner_sprite">
-          <a href="#"></a>
-        </div>
-      </div>
-    </div>
     <div class="main">
       <div class="area wrapper_02">
         <div class="area-left">

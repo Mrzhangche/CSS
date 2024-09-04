@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <style>
+      .banner {
+        height: 285px;
+        background-color: red;
+        background-image: url(./images/banner_01.jpg);
+        background-position: center center;
+        background-size: 6000px;
+      }
+      .banner .area {
+        position: relative;
+        height: 285px;
+        background-color: orange;
+      }
+
+      /* 轮播图 */
+      .banner .area-left {
+        position: relative;
+        width: 730px;
+      }
+      .banner .area-left .img-list {
+        display: flex;
+
+        overflow: hidden;
+      }
+      .banner .area-left .img-list li {
+        flex-shrink: 0;
+      }
+      .banner .area-left .img-list .item {
+        display: block;
+      }
+      .banner .area-left .img-list .item img {
+        width: 100%;
+        height: 285px;
+      }
+      /* 导航点 */
+      .banner .area-left .dots-list {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+      }
+      .banner .area-left .dots-list li {
+        margin: 0 8px;
+      }
+      .banner .area-left .dots-list .item:hover span {
+        background-position: -22px -350px;
+        width: 8px;
+        height: 8px;
+      }
+
+      /* 下载区域 */
+      .banner .area-right {
+        background-image: url(./images/download.png);
+        position: absolute;
+        right: -1px;
+        top: 0;
+        bottom: 0;
+        width: 254px;
+        background-color: red;
+      }
+      .banner .area-right .download {
+        display: block;
+        width: 215px;
+        height: 56px;
+        margin: 186px 0 0 19px;
+        text-indent: -9999px;
+      }
+      .banner .area-right .download:hover {
+        background-image: url(./images/download.png);
+        background-position: 0 -290px;
+      }
+
+      .banner .area-right .desc {
+        margin-top: 10px;
+        color: #8d8d8d;
+        font-size: 12px;
+        text-align: center;
+      }
+
+      /* 两个按钮 */
+      .banner .area .control {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        width: 37px;
+        height: 63px;
+      }
+      .banner .area .control a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .banner .area .control.left {
+        left: -50px;
+        background-position: 0 -360px;
+      }
+      .banner .area .control.right {
+        right: -50px;
+        background-position: 0 -508px;
+      }
+      .banner .area .control.left:hover {
+        background-position: 0 -430px;
+      }
+      .banner .area .control.right:hover {
+        background-position: 0 -578px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="area wrapper_03">
+        <div class="area-left">
+          <!-- 图片列表 -->
+          <ul class="img-list">
+            <li>
+              <a class="item" href="#">
+                <img src="./images/banner1.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a class="item" href="#">
+                <img src="./images/banner1.jpg" alt="" />
+              </a>
+            </li>
+            <li>
+              <a class="item" href="#">
+                <img src="./images/banner1.jpg" alt="" />
+              </a>
+            </li>
+          </ul>
+          <ul class="dots-list">
+            <li>
+              <a class="item" href="#"
+                ><span
+                  class="background_image_banner_sprite banner_icon_dots active"
+                ></span
+              ></a>
+            </li>
+            <li>
+              <a class="item" href="#"
+                ><span
+                  class="background_image_banner_sprite banner_icon_dots"
+                ></span
+              ></a>
+            </li>
+            <li>
+              <a class="item" href="#"
+                ><span
+                  class="background_image_banner_sprite banner_icon_dots"
+                ></span
+              ></a>
+            </li>
+            <li>
+              <a class="item" href="#"
+                ><span
+                  class="background_image_banner_sprite banner_icon_dots"
+                ></span
+              ></a>
+            </li>
+            <li>
+              <a class="item" href="#"
+                ><span
+                  class="background_image_banner_sprite banner_icon_dots"
+                ></span
+              ></a>
+            </li>
+            <li>
+              <a class="item" href="#"
+                ><span
+                  class="background_image_banner_sprite banner_icon_dots"
+                ></span
+              ></a>
+            </li>
+            <li>
+              <a class="item" href="#"
+                ><span
+                  class="background_image_banner_sprite banner_icon_dots"
+                ></span
+              ></a>
+            </li>
+            <li>
+              <a class="item" href="#"
+                ><span
+                  class="background_image_banner_sprite banner_icon_dots"
+                ></span
+              ></a>
+            </li>
+            <li>
+              <a class="item" href="#"
+                ><span
+                  class="background_image_banner_sprite banner_icon_dots"
+                ></span
+              ></a>
+            </li>
+            <li>
+              <a class="item" href="#"
+                ><span
+                  class="background_image_banner_sprite banner_icon_dots"
+                ></span
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="area-right">
+          <a class="download" href="#">下载客户端</a>
+          <p class="desc">PC 安卓 iPhone WP iPad Mac 六大客户端</p>
+        </div>
+        <div class="control left background_image_banner_sprite">
+          <a href="#"></a>
+        </div>
+        <div class="control right background_image_banner_sprite">
+          <a href="#"></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

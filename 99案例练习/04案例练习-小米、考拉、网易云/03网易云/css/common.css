@@ -6,3 +6,199 @@
     width: 980px;
     margin:0 auto
 }
+.wrapper_03{
+    width: 982px;
+    margin:0 auto
+}
+
+
+
+.background_image_topbar_sprite{
+    display: inline-block;
+    background-image: url(../images/topbar.png);
+}
+.background_image_banner_sprite{
+    display: inline-block;
+    background-image: url(../images/banner_sprite.png);
+}
+.background_image_download_sprite{
+    background-image: url(../images/download.png);
+}
+.background_image_main_sprite{
+   
+    background-image: url(../images/main_right.png);
+}
+
+/* 播放按钮 */
+.icon_main_play{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-position: -267px -205px;
+}
+.icon_main_play:hover{
+    background-position:-267px -235px
+}
+.icon_main_favor{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-position: -300px -205px;
+}
+.icon_main_favor:hover{
+    background-position:-300px -235px
+}
+.icon_play_02{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-position: -267px -268px;
+}
+.icon_favor_02{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-position:  -297px -268px;
+}
+.background_image_btn_sprite{
+    display: inline-block;
+    background-image: url(../images/button2.png);
+}
+
+
+.topbar_icon_hot{
+    width: 26px;
+    height: 13px;
+    background-position: -192px 0;
+}
+
+.topbar_icon_search{
+    width: 13px;
+    height: 14px;
+    background-position: 0 -99px;
+}
+
+.banner_icon_dots{
+    background-position: -4px -350px;
+    width: 6px;
+    height: 6px;
+}
+
+.main_icon_btn{
+    display: inline-block;
+    background-position: 0 -195px;
+}
+/* .banner_icon_dots_active{
+    background-position: -22px -350px;
+    width: 8px;
+    height: 8px;
+} */
+
+.btn_type_01_sup{
+    background-position: right -100px;
+    margin-right: 5px;
+    height: 31px;
+    line-height: 31px;
+    text-align: center;
+}
+.btn_type_01_sub{
+    display: block;
+    background-position: 0 -59px;
+    padding-left: 3px;
+    height: 31px;
+}
+
+/* 通用按钮右边框 */
+.btn_type_02_sup{
+    height: 31px;
+    line-height: 31px;
+    background-position:right -1020px;
+    padding-right: 4px;
+}
+.btn_type_02_sup:hover{
+    background-position: right -1106px;
+}
+
+/* 收藏按钮 */
+.btn_type_favor_sub{
+    font-size: 12px;
+    background-position: 0 -977px;
+    padding-left: 28px;
+    padding-right: 2px;
+}
+.btn_type_favor_sub:hover{
+    background-position: 0 -1063px;
+}
+
+/* 分享按钮 */
+.btn_type_share_sub{
+    font-size: 12px;
+    background-position: 0 -1225px;
+    padding-left: 28px;
+    padding-right: 2px;
+}
+.btn_type_share_sub:hover{
+    background-position: 0 -1268px;
+}
+
+/* 下载按钮 */
+.btn_type_download_sub{
+    font-size: 12px;
+    background-position: 0 -2761px;
+    padding-left: 28px;
+    padding-right: 2px;
+}
+.btn_type_download_sub:hover{
+    background-position: 0 -2805px;
+}
+
+/* 评论 */
+.btn_type_message_sub{
+    font-size: 12px;
+    background-position: 0 -1465px;
+    padding-left: 28px;
+    padding-right: 2px;
+}
+.btn_type_message_sub:hover{
+    background-position: 0 -1508px;
+}
+
+.icon_sprite{
+    display:inline-block;
+    background:url(../images/iconall.png);
+}
+
+.icon_music{
+    width: 14px;
+    height: 11px; 
+    background-position: 0 -24px;
+}
+.icon_play{
+    width: 16px;
+    height: 17px;
+    background-position:0 0 ;
+}
+
+.icon_sprite_01{
+    display: inline-block;
+    background-image: url(../images/icon.png);
+}
+
+.icon_01_radio{
+    background-position: -31px -658px;
+    width: 35px;
+    height: 15px;
+}
+
+.icon_play_01{
+    width: 22px;
+    height: 22px;
+    background-position: 0 -85px;
+}
+
+
+.icon_add{
+    width: 17px;
+    height: 17px;
+    background-position:2px -698px ;
+}
