@@ -1,0 +1,27 @@
+//兼容css代码
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+// 定义变量
+@mainColor: #333;
+@mainFontSize: 33px;
+.box1{
+    width: 100px;
+    height: 100px;
+    background-color: @mainColor;
+    font-size: @mainFontSize;
+}
+
+//嵌套
+.container{
+    width: 200px;
+    height: 200px;
+    background-color: @mainColor;
+    .box3{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+}

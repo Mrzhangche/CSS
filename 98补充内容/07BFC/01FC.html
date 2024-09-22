@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        margin-bottom: 40px;
+      }
+      .box2 {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        margin-top: 40px;
+      }
+
+      .container {
+        overflow: auto; /* 清除浮动 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- box1和box2在同一个BFC html中，因此会发生折叠 -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <!-- 此时，应当清除折叠，就需要形成一个新的BFC
+        box1在container的BFC中，与box2不在同一个BFC中 
+    -->
+    <div class="container">
+      <div class="box1"></div>
+    </div>
+    <div class="box2"></div>
+  </body>
+</html>

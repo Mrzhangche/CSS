@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 直接用在图片上 */
+      .image {
+        filter: blur(10px);
+      }
+      /* 设置cover进行模糊 */
+      .box {
+        display: inline-block;
+        position: relative;
+      }
+      .box .cover {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      class="image"
+      src="../99案例练习/04案例练习-小米、考拉、网易云/03网易云/images/album01.jpg"
+      alt=""
+    />
+    <div class="box">
+      <img
+        src="../99案例练习/04案例练习-小米、考拉、网易云/03网易云/images/album01.jpg"
+        alt=""
+      />
+      <div class="cover"></div>
+    </div>
+  </body>
+</html>
