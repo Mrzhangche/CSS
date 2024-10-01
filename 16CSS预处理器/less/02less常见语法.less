@@ -14,6 +14,7 @@
     font-size: @mainFontSize;
 }
 
+
 //嵌套
 .container{
     width: 200px;
@@ -23,5 +24,90 @@
         width: 100px;
         height: 100px;
         background-color: red;
+        // 伪类的用法
+        &:hover{
+            background-color: aqua;
+        }
     }
 }
+
+// 运算
+.box4{
+    width: 100px*2;
+    height: 100px;
+    background-color: aqua;
+}
+
+// Mixins
+// 普通混入
+.nowrap_ellipsis{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+        // 带参数混入
+.box_border(@borderWidth:1px,@borderColor:red){
+    border: @borderWidth solid @borderColor;
+}
+
+        //混入和映射结合使用
+        // 弥补less中不能自定义函数的缺陷
+.box_size{
+    width: 200px;
+    height: 100px;
+}
+@htmlFontSize:10px;
+.pxToRem(@px){
+    result:(@px / @htmlFontSize) * 1rem;
+}
+
+.box5{
+    width: .box_size()[width];
+    height: .pxToRem(100px)[result];
+    background-color: gold;
+    // 混入
+    .nowrap_ellipsis();
+    //传入参数
+    .box_border(2px,blue);
+}
+.box6{
+    width: 100px;
+    background-color: gray;
+     // 混入
+     .nowrap_ellipsis();
+    //  传入参数
+     .box_border(.1875rem,@mainColor);
+}
+
+
+// 继承
+.box_border_1{
+    border: 1px solid rgb(0, 0, 0);
+}
+.box7{
+    width: 100px;
+    background-color: red;
+    // 混入
+    // .box_border_1();
+    // 继承
+    &:extend(.box_border_1);
+}
+
+// 内置函数
+.box8{
+    // 将关键字转成rgb
+    color:color(red)
+}
+
+// 作用域
+@fontColor:red;
+.box9{
+    color:@fontColor;
+    @fontColor:blue;
+    .item{
+        @fontColor:green;
+        color:@fontColor;
+    }
+}
+

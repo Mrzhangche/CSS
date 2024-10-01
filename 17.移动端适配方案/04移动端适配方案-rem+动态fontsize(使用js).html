@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const htmlEl = document.documentElement;
+      function setRemUnit() {
+        //拿去屏幕宽度
+        const htmlWidth = htmlEl.clientWidth;
+        //文字大小是屏幕宽度的十分之一
+        const htmlFontSize = htmlEl.clientWidth / 10;
+        //给html设置文字大小
+        htmlEl.style.fontSize = htmlFontSize + "px";
+      }
+      setRemUnit();
+      window.addEventListener("resize", setRemUnit);
+    </script>
+    <style>
+      body {
+        font-size: 16px;
+      }
+      .box {
+        width: 2rem;
+        height: 2rem;
+        background-color: red;
+      }
+      p {
+        font-size: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <p>123</p>
+  </body>
+</html>

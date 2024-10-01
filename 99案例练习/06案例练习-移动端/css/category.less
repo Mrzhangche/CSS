@@ -1,0 +1,32 @@
+@import url(./variable.less);
+.category{
+    display: flex;
+    margin: 3.2vw;
+    padding:0 3.2vw;
+    .item{
+        flex: 1;
+        text-align: center;
+
+        .title{
+            font-size: 4.2667vw;
+            color:#666;
+        }
+        .subtitle{
+            height: 4.2667vw;
+            font-size: 3.2vw;
+            padding:0 1.6vw;
+            border-radius: 2.4vw;
+            color: #999;
+        }
+        &.active{
+            .title{
+                color:@mainColor
+            }
+            .subtitle{
+                background-color: @mainColor;
+                color: #fff;
+            }
+        }
+    }
+   
+}

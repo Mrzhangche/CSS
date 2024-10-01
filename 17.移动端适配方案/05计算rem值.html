@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet/less" href="./less/remPx.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1/dist/less.min.js"></script>
+    <script>
+      const htmlEl = document.documentElement;
+      function setRemUnit() {
+        //拿去屏幕宽度
+        const htmlWidth = htmlEl.clientWidth;
+        //文字大小是屏幕宽度的十分之一
+        const htmlFontSize = htmlEl.clientWidth / 10;
+        //给html设置文字大小
+        htmlEl.style.fontSize = htmlFontSize + "px";
+      }
+      setRemUnit();
+      window.addEventListener("resize", setRemUnit);
+    </script>
+    <style>
+      .box2 {
+        width: 2.6667rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <!-- 通过插件 -->
+    <div class="box2"></div>
+  </body>
+</html>

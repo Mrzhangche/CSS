@@ -1,0 +1,49 @@
+@import url(./variable.less);
+@import url(./mixin.less);
+    .download{
+        display: flex;
+        height: 16vw;
+        background-color: white;
+        .left{
+            flex: 1;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #f1f1f1;
+            padding:0 2.6667vw;
+            img{
+                width: 10.6667vw;
+                height: 10.6667vw;
+                border-radius: 2.13333vw;
+                box-shadow: 0 0 0.93333vw 0 rgb(0 0 0 / 15%);
+            }
+            .info{
+                margin-left: 2.13333vw;
+                overflow: hidden;
+             
+                .title{
+                    color: #333;
+                    font-size: @smallFontSize;
+                    .nowrap();
+                }
+                .desc{
+                    margin-top: .5333vw;
+                    color: #999;
+                    font-size: 3.2vw;
+                    .nowrap();
+                }
+            }
+        }
+        .right{
+            width: 25.2vw;
+            text-align: center;
+            line-height: 16vw;
+            font-size: @normalFontSize;
+            background: linear-gradient(to right,#ff0409,#ff3162);
+            a{
+                color: #fff;
+            }
+            
+        }
+    }

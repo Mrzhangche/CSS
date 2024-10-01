@@ -1,0 +1,10 @@
+.pxToRem(@px) {
+    // 37.5是根据设计稿进行换算的
+    result:1rem*(@px/37.5)
+}
+
+.box{
+    width: .pxToRem(750px)[result];
+    height: .pxToRem(200px)[result];
+    background-color: aqua;
+}

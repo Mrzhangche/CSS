@@ -19,3 +19,54 @@
   height: 100px;
   background-color: red;
 }
+.container .box3:hover {
+  background-color: aqua;
+}
+.box4 {
+  width: 200px;
+  height: 100px;
+  background-color: aqua;
+}
+.nowrap_ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.box_size {
+  width: 200px;
+  height: 100px;
+}
+.box5 {
+  width: 200px;
+  height: 10rem;
+  background-color: gold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border: 2px solid blue;
+}
+.box6 {
+  width: 100px;
+  background-color: gray;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border: 0.1875rem solid #333;
+}
+.box_border_1,
+.box7 {
+  border: 1px solid #000000;
+}
+.box7 {
+  width: 100px;
+  background-color: red;
+}
+.box8 {
+  color: #ff0000;
+}
+.box9 {
+  color: blue;
+}
+.box9 .item {
+  color: green;
+}
